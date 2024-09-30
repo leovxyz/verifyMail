@@ -67,3 +67,5 @@ function sendMail(to, subject, msg) {
 
 sendMail('leov3@pm.me', 'Welcome to Our Service', 'Thank you for registering with us. We hope you enjoy using our platform!');
 
+//run this command in terminal to send mail
+//node mailsender\mailSender.js

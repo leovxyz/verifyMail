@@ -15,7 +15,6 @@
     "bcrypt": "^5.1.1",
     "body-parser": "^1.20.3",
     "dotenv": "^16.4.5",
-    "dve": "^2.0.1",
     "express": "^4.21.0",
     "express-session": "^1.18.0",
     "express-validator": "^7.2.0",

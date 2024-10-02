@@ -1,0 +1,65 @@
+[33mcommit 483ff44ae69dd8c824cf3c3d40e9e5f732cca297[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m
+Author: Leo <sw.frenzy568@passinbox.com>
+Date:   Mon Sep 30 20:13:54 2024 +0200
+
+    Update mailSender.js
+
+[33mcommit 94d66b2a9c2af16a1d75811d0785adc4c772ddd5[m
+Author: Leo <sw.frenzy568@passinbox.com>
+Date:   Mon Sep 30 20:13:52 2024 +0200
+
+    Update .gitignore
+
+[33mcommit c49dee5e8bad075f211bf66d61e8d5a834fc5a31[m
+Author: Leo <sw.frenzy568@passinbox.com>
+Date:   Mon Sep 30 15:22:48 2024 +0200
+
+    Update mailSender.js
+
+[33mcommit 53004a68c387b81bf1196b8b95a54ced60d58f90[m
+Author: Leo <sw.frenzy568@passinbox.com>
+Date:   Mon Sep 30 15:22:17 2024 +0200
+
+    Update index.js
+
+[33mcommit dca55b0aec9a1c6865f0ebe8b0b01ee6bf23c19b[m
+Author: Leo <sw.frenzy568@passinbox.com>
+Date:   Mon Sep 30 15:22:15 2024 +0200
+
+    Update mailSender.js
+
+[33mcommit f6553006e01a147266451a9e7b974c2c44071d38[m
+Author: Leo <sw.frenzy568@passinbox.com>
+Date:   Mon Sep 30 15:22:13 2024 +0200
+
+    Update package-lock.json
+
+[33mcommit 04a04fc01433c5c1e3dcbed87991c5573d8e4cc8[m
+Author: Leo <sw.frenzy568@passinbox.com>
+Date:   Mon Sep 30 15:22:10 2024 +0200
+
+    Update package.json
+
+[33mcommit 4b8262298e40b2becc1aa7be902e9594af770ba9[m
+Author: Leo <sw.frenzy568@passinbox.com>
+Date:   Mon Sep 30 15:22:05 2024 +0200
+
+    node modules
+
+[33mcommit f90b29f0ab554715871a44599c637f25b7356d73[m
+Author: Leo <sw.frenzy568@passinbox.com>
+Date:   Mon Sep 30 14:19:37 2024 +0200
+
+    mailSender working fine
+
+[33mcommit 128f3c1edd2378f2a4ef4d9951cae45a0268b091[m
+Author: Leo <sw.frenzy568@passinbox.com>
+Date:   Mon Sep 30 14:01:39 2024 +0200
+
+    init v2
+
+[33mcommit 3ac94947440d9eac26d4d32c1cc604a4b010fdee[m
+Author: Leo <sw.frenzy568@passinbox.com>
+Date:   Mon Sep 30 14:00:43 2024 +0200
+
+    init

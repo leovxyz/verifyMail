@@ -1,4 +1,5 @@
 const nodemailer = require('nodemailer');
+const { verificationCode } = require('../token/tokenGeneration.js');
 
 const transporter = nodemailer.createTransport(
     {
@@ -60,12 +61,13 @@ function sendMail(to, subject, msg) {
         if (error) {
             console.error("Error sending email:", error);
         } else {
-            console.log("Email sent:", info.response);
+            console.log(`Email sent to: ${to}`); //info.response
         }
     });
 }
 
-sendMail('leov3@pm.me', 'Welcome to Our Service', 'Thank you for registering with us. We hope you enjoy using our platform!');
+sendMail('leov3@pm.me', 'Hey there, thank you for requesting a verification code', 'Your verification code is: ' + verificationCode);
+
 
 // run this command in terminal to send mail
 // node mailsender\mailSender.js

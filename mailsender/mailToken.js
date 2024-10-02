@@ -3,42 +3,13 @@ const { generateAndStoreToken } = require('../token/tokenGeneration');
 const { handleVerification } = require('../token/tokenVerification');
 const { transporter } = require('../config/mailConfig');
 const readline = require('readline');
+const { generateHTMLTemplate } = require('../utils/emailTemplates');
 
 // Generate an HTML template for the verification email
-function generateHTMLTemplate(verificationCode) {
-    return `
-        <!DOCTYPE html>
-        <html lang="en">
-        <head>
-            <meta charset="UTF-8">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <title>Verification Code</title>
-            <style>
-                body {
-                    font-family: Arial, sans-serif;
-                    line-height: 1.6;
-                    color: #333;
-                }
-                .container {
-                    max-width: 600px;
-                    margin: 0 auto;
-                    padding: 20px;
-                    border: 1px solid #ddd;
-                    border-radius: 5px;
-                }
-                h1 {
-                    color: #4a4a4a;
-                }
-            </style>
-        </head>
-        <body>
-            <div class="container">
-                <h1>Verification Code</h1>
-                <p>Your verification code is: ${verificationCode}</p>
-            </div>
-        </body>
-        </html>
-    `;
+function generateVerificationEmailContent(verificationCode) {
+    const subject = 'Verification Code';
+    const content = `<p>Your verification code is: ${verificationCode}</p>`;
+    return generateHTMLTemplate(subject, content);
 }
 
 // Prompt the user to enter their email address
@@ -64,7 +35,6 @@ function askForEmail() {
         promptEmail();
     });
 }
-
 // Prompt the user to enter the verification code they received
 function askForVerificationCode() {
     const rl = readline.createInterface({
@@ -93,7 +63,7 @@ async function sendMailAndVerify() {
         from: process.env.EMAIL_USER,
         to: recipientEmail,
         subject: 'Verification Code',
-        html: generateHTMLTemplate(verificationCode)
+        html: generateVerificationEmailContent(verificationCode)
     };
     
     try {
@@ -121,7 +91,7 @@ async function sendMailAndVerify() {
 async function main() {
     await sendMailAndVerify();
     // Add a small delay before exiting to ensure all console messages are displayed
-    await new Promise(resolve => setTimeout(resolve, 100));
+    await new Promise(resolve => setTimeout(resolve, 50)); // 50 milliseconds
     process.exit(0);
 }
 

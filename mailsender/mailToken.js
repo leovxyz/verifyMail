@@ -9,6 +9,7 @@ const { generateHTMLTemplate } = require('../utils/emailTemplates');
 function generateVerificationEmailContent(verificationCode) {
     const subject = 'Verification Code';
     const content = `<p>Your verification code is: ${verificationCode}</p>`;
+    
     return generateHTMLTemplate(subject, content);
 }
 

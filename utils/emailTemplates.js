@@ -1,6 +1,15 @@
-// Reusable HTML template for emails
+const fs = require('fs');
+const path = require('path');
+
+function getBase64Image(imagePath) {
+    const imageBuffer = fs.readFileSync(imagePath);
+    return imageBuffer.toString('base64');
+}
 
 function generateHTMLTemplate(subject, content) {
+    const imagePath = path.join(__dirname, '..', 'src', 'img', 'giphy.webp');
+    const base64Image = getBase64Image(imagePath);
+
     return `
         <!DOCTYPE html>
         <html lang="en">
@@ -15,6 +24,7 @@ function generateHTMLTemplate(subject, content) {
                     color: #333;
                 }
                 .container {
+                    background-color: #fff;
                     max-width: 600px;
                     margin: 0 auto;
                     padding: 20px;
@@ -22,7 +32,13 @@ function generateHTMLTemplate(subject, content) {
                     border-radius: 5px;
                 }
                 h1 {
-                    color: #4a4a4a;
+                    color: #000;
+                }
+                .email-image {
+                    max-width: 100%;
+                    height: auto;
+                    display: block;
+                    margin: 20px auto;
                 }
             </style>
         </head>
@@ -30,6 +46,7 @@ function generateHTMLTemplate(subject, content) {
             <div class="container">
                 <h1>${subject}</h1>
                 ${content}
+                <img src="data:image/webp;base64,${base64Image}" alt="Email Image" class="email-image">
             </div>
         </body>
         </html>

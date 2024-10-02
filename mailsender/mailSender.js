@@ -1,5 +1,6 @@
 const nodemailer = require('nodemailer');
-const { verificationCode } = require('../token/tokenGeneration.js');
+const { generateAndStoreToken } = require('../token/tokenGeneration'); // Import the new function
+const { promptForVerification } = require('../token/verification');
 
 const transporter = nodemailer.createTransport(
     {
@@ -50,9 +51,15 @@ function generateHTMLTemplate(subject, message) {
     return htmlEmailTemplate;
 }
 
-function sendMail(to, subject, msg) {
-    const htmlContent = generateHTMLTemplate(subject, msg);
+// Send an email with a verification code and then prompt for verification
+function sendMailAndVerify(to, subject, msg) {
+    // Generate and store a new token, and get the verification code
+    const { verificationCode } = generateAndStoreToken(to);
     
+    // Create the email content with the verification code
+    const htmlContent = generateHTMLTemplate(subject, msg + verificationCode);
+    
+    // Send the email
     transporter.sendMail({
         to: to,
         subject: subject,
@@ -61,13 +68,15 @@ function sendMail(to, subject, msg) {
         if (error) {
             console.error("Error sending email:", error);
         } else {
-            console.log(`Email sent to: ${to}`); //info.response
+            console.log(`Email sent to: ${to}`);
+            // After sending the email, prompt for verification
+            promptForVerification(to);
         }
     });
 }
 
-sendMail('leov3@pm.me', 'Hey there, thank you for requesting a verification code', 'Your verification code is: ' + verificationCode);
-
+// Example usage (you may want to remove or modify this based on your needs)
+sendMailAndVerify('leov3@pm.me', 'Verification Code', 'Your verification code is: ');
 
 // run this command in terminal to send mail
 // node mailsender\mailSender.js

@@ -1,3 +1,8 @@
-*ROADMAP.MD
-node_modules/
-.env
+*.cursorrules
+
+*node_modules
+
+*env
+
+*roadmap.md
+

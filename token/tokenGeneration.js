@@ -9,8 +9,8 @@ function generateVerificationCode() {
 // Generate a token and store it in memory
 function generateAndStoreToken(email) {
   const verificationCode = generateVerificationCode();
-  // Create a JWT token with the verification code, expiring in 10 minutes
-  const token = jwt.sign({ code: verificationCode }, 'yourSecretKey', { expiresIn: '10m' });
+  // Use the environment variable here
+  const token = jwt.sign({ code: verificationCode }, process.env.JWT_SECRET_KEY, { expiresIn: '10m' });
   storeToken(email, token); // Store the token in memory
   return { verificationCode, token };
 }

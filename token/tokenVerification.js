@@ -11,7 +11,8 @@ async function verifyToken(email, userCode) {
   }
 
   try {
-    const decoded = jwt.verify(token, 'yourSecretKey');
+    // Use the environment variable here
+    const decoded = jwt.verify(token, process.env.JWT_SECRET_KEY);
     if (decoded.code === parseInt(userCode)) {
       console.log('Verification successful!');
       removeToken(email);
@@ -43,5 +44,4 @@ async function handleVerification(email, userCode) {
     return false;
   }
 }
-
 module.exports = { handleVerification };

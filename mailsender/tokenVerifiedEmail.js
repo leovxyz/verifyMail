@@ -1,45 +1,11 @@
 const { transporter } = require('../config/mailConfig');
+const { generateHTMLTemplate } = require('../utils/emailTemplates');
 
-function generateHTMLTemplate(subject, message) {
-    return `
-        <!DOCTYPE html>
-        <html lang="en">
-        <head>
-            <meta charset="UTF-8">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <title>${subject}</title>
-            <style>
-                body {
-                    font-family: Arial, sans-serif;
-                    line-height: 1.6;
-                    color: #333;
-                }
-                .container {
-                    max-width: 600px;
-                    margin: 0 auto;
-                    padding: 20px;
-                    border: 1px solid #ddd;
-                    border-radius: 5px;
-                }
-                h1 {
-                    color: #4a4a4a;
-                }
-            </style>
-        </head>
-        <body>
-            <div class="container">
-                <h1>${subject}</h1>
-                <p>${message}</p>
-            </div>
-        </body>
-        </html>
-    `;
-}
-
+// Function to send an email when the token is verified
 function sendTokenVerifiedEmail(to) {
     const subject = 'Email Verification Successful';
-    const message = 'Your email has been successfully verified. Thank you for completing the verification process.';
-    const htmlContent = generateHTMLTemplate(subject, message);
+    const content = '<p>Your email has been successfully verified. Thank you for completing the verification process.</p>';
+    const htmlContent = generateHTMLTemplate(subject, content);
 
     const mailOptions = {
         from: process.env.EMAIL_USER,

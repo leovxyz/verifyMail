@@ -20,7 +20,7 @@ VerifyMail is a lightweight Node.js-based email verification system. It provides
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/verifymail.git
+   git clone https://github.com/leovxyz/verifymail.git
    cd verifymail
    ```
 
@@ -67,4 +67,4 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 
 ## License
 
-This project is licensed under the ISC License.
+This project is licensed under the MIT License.

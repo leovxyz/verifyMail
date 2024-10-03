@@ -5,6 +5,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "v": "node email/emailVerification.js",
+    "start": "node email/emailVerification.js",
     "dev": "nodemon email/emailVerification.js"
   },
   "keywords": [

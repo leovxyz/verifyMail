@@ -39,6 +39,14 @@ VerifyMail is a lightweight Node.js-based email verification system. It provides
 
    Note: For EMAIL_PASS, use an app password generated from your Google Account settings.
 
+   To generate a secure JWT_SECRET_KEY, you can use the following command in your terminal:
+
+   ```bash
+   node -e "console.log(require('crypto').randomBytes(64).toString('hex'))"
+   ```
+
+   This will generate a random 64-byte hexadecimal string, which is suitable for use as a JWT secret key.
+
 ## Usage
 
 To start the application:
@@ -60,10 +68,6 @@ npm run verify
 ```
 
 The application will prompt you to enter an email address for verification. Follow the instructions in the console to complete the verification process.
-
-## Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request.
 
 ## License
 

@@ -10,7 +10,14 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": "",
+  "description": "VerifyMail is a lightweight Node.js-based email verification system. It provides a simple and secure way to verify email addresses using one-time verification codes.",
+  "homepage": "https://github.com/leovxyz/verifymail#readme",
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/leovxyz/verifymail/blob/main/LICENSE"
+    }
+  ],
   "dependencies": {
     "bcrypt": "^5.1.1",
     "body-parser": "^1.20.3",

@@ -7,7 +7,19 @@
     "start": "node email/emailVerification.js",
     "dev": "nodemon email/emailVerification.js"
   },
-  "keywords": [],
+  "keywords": [
+    "nodejs",
+    "email-verification",
+    "jwt",
+    "nodemailer",
+    "bcrypt",
+    "security-token",
+    "expressjs",
+    "verification-system",
+    "email-confirmation",
+    "verifymail",
+    "javascript"
+  ],
   "author": "",
   "license": "ISC",
   "description": "VerifyMail is a lightweight Node.js-based email verification system. It provides a simple and secure way to verify email addresses using one-time verification codes.",

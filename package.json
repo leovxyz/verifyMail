@@ -1,11 +1,11 @@
 {
   "name": "userauthentication",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "email/emailVerification.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js",
-    "dev": "nodemon index.js"
+    "start": "node email/emailVerification.js",
+    "dev": "nodemon email/emailVerification.js"
   },
   "keywords": [],
   "author": "",

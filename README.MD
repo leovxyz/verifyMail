@@ -44,13 +44,19 @@ VerifyMail is a lightweight Node.js-based email verification system. It provides
 To start the application:
 
 ```
-node mailsender/mailToken.js
+npm start
 ```
 
-For development with auto-restart, you can use nodemon (if installed):
+For development with auto-restart, you can use nodemon:
 
 ```
-nodemon mailsender/mailToken.js
+npm run dev
+```
+
+To run the verification process:
+
+```
+npm run verify
 ```
 
 The application will prompt you to enter an email address for verification. Follow the instructions in the console to complete the verification process.

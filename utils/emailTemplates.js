@@ -40,6 +40,9 @@ function generateHTMLTemplate(subject, content) {
                     display: block;
                     margin: 20px auto;
                 }
+                b {
+                    font-size: 20px;
+                }
             </style>
         </head>
         <body>

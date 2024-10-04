@@ -4,11 +4,12 @@ VerifyMail is a lightweight Node.js-based email verification system. It provides
 
 ## Features
 
-- Generate and send verification codes via email
-- Secure token generation and storage
-- Email-based verification process
-- JWT (JSON Web Token) integration for enhanced security
-- Modular architecture for easy maintenance and scalability
+- Ask's for email address
+- Generate a unique and secure JWT token
+- Store the generated code
+- Send an email to the user's email address with the verification code
+- Request a verification code from the user
+- Verify the code
 
 ## Prerequisites
 

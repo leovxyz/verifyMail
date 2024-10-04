@@ -10,6 +10,7 @@ VerifyMail is a lightweight Node.js-based email verification system. It provides
 - Send an email to the user's email address with the verification code
 - Request a verification code from the user
 - Verify the code
+- Send an email confirming the verification 
 
 ## Prerequisites
 

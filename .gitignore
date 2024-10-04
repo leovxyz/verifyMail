@@ -3,6 +3,7 @@ node_modules/
 /npm-debug.log
 /yarn-error.log
 
+
 # Environment variables
 .env
 .env.local
@@ -23,6 +24,5 @@ node_modules/
 Thumbs.db
 
 # Project specific
-*.cursorrules
 roadmap.md
 
